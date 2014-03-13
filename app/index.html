@@ -55,13 +55,13 @@
 						<thead>
 							<tr>
 								<th></th>
-								<th ng-repeat="day in weekdays">{{day}}</th>
+								<th ng-repeat="day in weekdays" ng-class="{info: $index==currentDay}">{{day}}</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr ng-repeat="meal in meals">
 								<td>{{meal.text}}</td>
-								<td ng-repeat="day in days">{{day[meal.id].text}}<p class="small text-right">{{day[meal.id].price}} &euro;</p></td>
+								<td ng-repeat="day in days" ng-class="{info: $index==currentDay}">{{day[meal.id].text}}<p class="small text-right">{{day[meal.id].price}} &euro;</p></td>
 							</tr>
 						</tbody>
 					</table>

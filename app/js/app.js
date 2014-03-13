@@ -1,5 +1,5 @@
 
-function DesktopViewCtrl($rootScope) {
+function DesktopViewCtrl($rootScope, $scope) {
 	$rootScope.weekdays = [
 		'Montag','Dienstag','Mittwoch','Donnerstag','Freitag'
 	];
@@ -31,10 +31,10 @@ function DesktopViewCtrl($rootScope) {
 			{ text:'Currywurst', price:'4,00', id:1 }
 		]
 	];
-		
+	
+	
 }
 
 function MobileViewCtrl($rootScope) {
-	$rootScope.currentDay = 1; //new Date().getDay(); //todo
-	
+	$rootScope.currentDay = new Date().getDay() - 1;
 }

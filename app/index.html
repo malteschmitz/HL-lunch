@@ -9,6 +9,8 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">		
 		
+		<script src="lib/jquery/jquery-2.1.0.min.js"></script>
+		
 		<script src="lib/angular/angular.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/controllers.js"></script>
@@ -30,8 +32,10 @@
 				</div>
 				<div class="collapse navbar-collapse" ng-controller="DataCtrl">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#casino">Casino</a></li>
-						<li><a href="#mensa">Mensa</a></li>
+						<li ng-repeat="canteen in canteens"
+							ng-class="{ 'active': $index === selectedCanteen }">
+							<a href="" ng-click="canteenClicked($index)">{{canteen}}</a>
+						</li>
 					</ul>
 				</div>
 			</div>

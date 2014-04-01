@@ -1,4 +1,10 @@
 
+// Add method getWeek to Date object
+Date.prototype.getWeek = function() {
+	var onejan = new Date(this.getFullYear(),0,1);
+	return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
+} 
+
 var lunchControllers = angular.module('lunchControllers', []);
 
 function withZeroPadding(value) {
@@ -6,8 +12,8 @@ function withZeroPadding(value) {
 }
 
 
-lunchControllers.controller('DataCtrl', ['$rootScope', '$http', 
-	function($rootScope, $http) {
+lunchControllers.controller('DataCtrl', ['$rootScope', '$http', '$scope', 
+	function($rootScope, $http, $scope) {
 		$rootScope.getData = function(year, kw, canteen) {
 			var config = {
 				method:'GET',
@@ -25,20 +31,32 @@ lunchControllers.controller('DataCtrl', ['$rootScope', '$http',
 			});
 		};
 		
+		$scope.canteens = ["Casino", "Mensa"];
+		$scope.selectedCanteen = 0;
+		$scope.canteenClicked = function($index) {
+			$scope.selectedCanteen = $index;
+			$rootScope.canteen = $scope.canteens[$index].toLowerCase();
+		};
+		
 		var today = new Date();
 		
+		// static values
 		$rootScope.weekdays = [
 			'Montag','Dienstag','Mittwoch','Donnerstag','Freitag'
 		];
 		
 		$rootScope.year = today.getFullYear();
-		$rootScope.kw = 11;						// navigates desktop view
-		$rootScope.canteen = 'casino';			// navigates canteen
-		$rootScope.day = today.getDay() - 1; 	// navigates mobile view
+		$rootScope.kw = today.getWeek();
+		$rootScope.currentDay = today.getDay() - 1;
 		
-		$rootScope.currentDay = today.getDay() - 1; // static value
+		// navigation variables
+		$rootScope.canteen = 'casino';				// navigates canteen
+		$rootScope.day = today.getDay() - 1; 		// navigates mobile view
 		
-		$rootScope.getData($rootScope.year,$rootScope.kw,$rootScope.canteen);
+		// watch function
+		$rootScope.$watch('canteen', function() {
+			$rootScope.getData($rootScope.year,$rootScope.kw,$rootScope.canteen);
+		});
 	}
 ]);
 
@@ -55,8 +73,6 @@ lunchControllers.controller('MobileViewCtrl', ['$rootScope',
 			if($rootScope.day > 4) {
 				$rootScope.day = 4;
 			}
-			
-			console.log($rootScope.day);
 		};
 		
 		$rootScope.previousDay = function() {
@@ -65,8 +81,12 @@ lunchControllers.controller('MobileViewCtrl', ['$rootScope',
 			if($rootScope.day < 0) {
 				$rootScope.day = 0;
 			}
-			
-			console.log($rootScope.day);
 		};
+	}
+]);
+
+lunchControllers.controller('DesktopViewCtrl', ['$rootScope',
+	function($rootScope) {
+		
 	}
 ]);

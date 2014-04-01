@@ -32,10 +32,11 @@ lunchControllers.controller('DataCtrl', ['$rootScope', '$http',
 		];
 		
 		$rootScope.year = today.getFullYear();
-		$rootScope.kw = 11;
-		$rootScope.canteen = 'casino';
+		$rootScope.kw = 11;						// navigates desktop view
+		$rootScope.canteen = 'casino';			// navigates canteen
+		$rootScope.day = today.getDay() - 1; 	// navigates mobile view
 		
-		$rootScope.currentDay = new Date().getDay() - 1;
+		$rootScope.currentDay = today.getDay() - 1; // static value
 		
 		$rootScope.getData($rootScope.year,$rootScope.kw,$rootScope.canteen);
 	}
@@ -43,12 +44,29 @@ lunchControllers.controller('DataCtrl', ['$rootScope', '$http',
 
 lunchControllers.controller('MobileViewCtrl', ['$rootScope', 
 	function($rootScope) {
-
-	}
-]);
-
-lunchControllers.controller('DesktopViewCtrl', ['$rootScope',
-	function($rootScope) {
 		
+		$rootScope.showToday = function() {
+			$rootScope.day = $rootScope.currentDay;
+		};
+		
+		$rootScope.nextDay = function() {
+			$rootScope.day = $rootScope.day + 1;
+			
+			if($rootScope.day > 4) {
+				$rootScope.day = 4;
+			}
+			
+			console.log($rootScope.day);
+		};
+		
+		$rootScope.previousDay = function() {
+			$rootScope.day = $rootScope.day - 1;
+			
+			if($rootScope.day < 0) {
+				$rootScope.day = 0;
+			}
+			
+			console.log($rootScope.day);
+		};
 	}
 ]);

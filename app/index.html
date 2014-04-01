@@ -43,7 +43,7 @@
 			<!-- MobileView shows list of single day -->
 			<div id="mobileView" class="visible-xs visible-sm" ng-controller="MobileViewCtrl">
 				<div class="list-group">
-					<div class="row list-group-item" ng-repeat="meal in days[currentDay]">
+					<div class="row list-group-item" ng-repeat="meal in days[day]">
 						<div class="col-xs-4">{{meals[meal.id].text}} 
 							<p class="small" ng-if="meal.price.length > 1">{{meal.price}} &euro;</p>
 						</div>
@@ -89,29 +89,16 @@
 			
 			<!-- mobileCtrl navigates between days -->
 			<div id="mobileCtrl" class="btn-group btn-group-justified visible-xs visible-sm">
-				<a class="btn btn-primary btn-lg" href="" role="button">
+				<a class="btn btn-primary btn-lg" href="" role="button" ng-click="previousDay()">
 					<span class="glyphicon glyphicon-chevron-left"></span>
 				</a>
-				<a class="btn btn-primary btn-lg" href="" role="button">
+				<a class="btn btn-primary btn-lg" href="" role="button" ng-click="showToday()">
 					<span class="glyphicon glyphicon-home"></span>
 				</a>
-				<a class="btn btn-primary btn-lg" href="" role="button">
+				<a class="btn btn-primary btn-lg" href="" role="button" ng-click="nextDay()">
 					<span class="glyphicon glyphicon-chevron-right"></span>
 				</a>
 			</div> <!-- end of mobileCtrl -->
-			
-			<!-- desktopCtrl navigates between weeks -->
-			<div id="desktopCtrl" class="btn-group btn-group-justified visible-md visible-lg">
-				<a class="btn btn-primary btn-lg" href="" role="button">
-					<span class="glyphicon glyphicon-chevron-left"></span> Zur&uuml;ck
-				</a>
-				<a class="btn btn-primary btn-lg" href="" role="button">
-					<span class="glyphicon glyphicon-home"></span> Heute
-				</a>
-				<a class="btn btn-primary btn-lg" href="" role="button">
-					<span class="glyphicon glyphicon-chevron-right"></span> Vor
-				</a>
-			</div> <!-- end of desktopCtrl -->
 		</div> <!-- end of footer -->
 		
 		<!-- Add JavaScript required by bootstrap -->

@@ -1,6 +1,10 @@
 
 var lunchApp = angular.module('lunchApp', [
-		'lunchControllers'
+		'lunchControllers',
+		'lunchServices'
 	]
 );
 
+lunchApp.run(function($rootScope) {
+	
+});

@@ -12,6 +12,7 @@
 		<script src="lib/angular/angular.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/controllers.js"></script>
+		<script src="js/services.js"></script>
 		
 		<link rel="stylesheet" href="css/app.css">
 	</head>
@@ -27,7 +28,7 @@
 					</button>
 					<span class="navbar-brand">HL-lunch</span>
 				</div>
-				<div class="collapse navbar-collapse">
+				<div class="collapse navbar-collapse" ng-controller="DataCtrl">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#casino">Casino</a></li>
 						<li><a href="#mensa">Mensa</a></li>
@@ -43,8 +44,14 @@
 			<div id="mobileView" class="visible-xs visible-sm" ng-controller="MobileViewCtrl">
 				<div class="list-group">
 					<div class="row list-group-item" ng-repeat="meal in days[currentDay]">
-						<div class="col-xs-4">{{meals[meal.id].text}} <p class="small">{{meal.price}} &euro;</p></div>
-						<div class="col-xs-8">{{meal.text}}</div>
+						<div class="col-xs-4">{{meals[meal.id].text}} 
+							<p class="small">{{meal.price}} &euro;</p>
+						</div>
+						<div class="col-xs-8">
+							<span ng-repeat="line in meal.text track by $index">
+								{{line}} <br />
+							</span>
+						</div>
 					</div>
 				</div>
 			</div> <!-- end of mobileView -->
@@ -62,7 +69,12 @@
 						<tbody>
 							<tr ng-repeat="meal in meals">
 								<td>{{meal.text}}</td>
-								<td ng-repeat="day in days" ng-class="{info: $index==currentDay}">{{day[meal.id].text}}<p class="small text-right">{{day[meal.id].price}} &euro;</p></td>
+								<td ng-repeat="day in days" ng-class="{info: $index==currentDay}">
+									<span ng-repeat="line in day[meal.id].text track by $index">
+										{{line}} <br/>
+									</span>
+									<p class="small text-right">{{day[meal.id].price}} &euro;</p>
+								</td>
 							</tr>
 						</tbody>
 					</table>

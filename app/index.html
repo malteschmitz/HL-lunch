@@ -45,7 +45,7 @@
 				<div class="list-group">
 					<div class="row list-group-item" ng-repeat="meal in days[currentDay]">
 						<div class="col-xs-4">{{meals[meal.id].text}} 
-							<p class="small">{{meal.price}} &euro;</p>
+							<p class="small" ng-if="meal.price.length > 1">{{meal.price}} &euro;</p>
 						</div>
 						<div class="col-xs-8">
 							<span ng-repeat="line in meal.text track by $index">
@@ -73,7 +73,9 @@
 									<span ng-repeat="line in day[meal.id].text track by $index">
 										{{line}} <br/>
 									</span>
-									<p class="small text-right">{{day[meal.id].price}} &euro;</p>
+									<p class="small text-right" ng-if="day[meal.id].price.length > 1">
+										{{day[meal.id].price}} &euro;
+									</p>
 								</td>
 							</tr>
 						</tbody>

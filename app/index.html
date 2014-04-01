@@ -46,6 +46,10 @@
 			
 			<!-- MobileView shows list of single day -->
 			<div id="mobileView" class="visible-xs visible-sm" ng-controller="MobileViewCtrl">
+				<p class="text-center h3">
+					{{ weekdays[day] }}
+				</p>
+				
 				<div class="list-group">
 					<div class="row list-group-item" ng-repeat="meal in days[day]">
 						<div class="col-xs-4">{{meals[meal.id].text}} 

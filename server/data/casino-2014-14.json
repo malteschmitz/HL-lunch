@@ -1,0 +1,120 @@
+{
+	"meals": [
+		{ "text":"Menü 1", "id":0 },
+		{ "text":"Menü 2", "id":1 },
+		{ "text":"Menü 3", "id":2 },
+		{ "text":"Tagessuppe", "id":3 }
+	],
+	"week": [
+		[
+			{
+				"text":["Hähnchenbrustfilet", "Kräutersauce", "Kaisergemüse", "Petersilienkartoffeln"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Vollkorn- Pilzbratling", "Zitronengrassauce", "Gemüsereis", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":["Putenschnitzel","mit Zitronenecke","Nudelsalat an","Salatgarnitur"],
+				"price":"4,00",
+				"id":2
+			},
+			{
+				"text":["Möhrensuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Gebackenes Fischfilet", "Remouladensauce", "Mayonaise-Kartoffelsalat", "Salat der Saison"],
+				"price":"3,40",
+				"id":0
+			},
+			{
+				"text":["Spaghetti Napoli", "Parmesan", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":["Gefüllte Grilltasche vom Schwein","Pfeffersauce","Paprika-Karotten Gemüse","Rösti-Bits"],
+				"price":"4,30",
+				"id":2
+			},
+			{
+				"text":["Blumenkohlsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Paniertes Schweineschnitzel", "Zigeunersauce", "Nudeln"],
+				"price":"3,60",
+				"id":0
+			},
+			{
+				"text":["Spinat-Omelett", "Zwiebelsauce", "Röstkartoffeln"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":["Mediterraner Geflügelbratling","Rosmarin-Kartoffel-Gemüsemix"],
+				"price":"4,30",
+				"id":2
+			},
+			{
+				"text":["Gemüsesuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Gulasch vom Schwein", "Erbsen", "Spirelli", "Salat der Saison"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Gnocchi", "Tomaten- Paprikasauce", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":["Großer Chefsalat","Schinken","Käsestreifen","Baguette"],
+				"price":"3,80",
+				"id":2
+			},
+			{
+				"text":["Spinatsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Hackbällchen", "Pilzrahmsauce", "Gemüsereis"],
+				"price":"3,30",
+				"id":0
+			},
+			{
+				"text":["Champignon-Blätterteig-Tasche", "Salatbeilage"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":["Sauer eingelegte Bratheringe","Röstkartoffeln","Salatbeilage"],
+				"price":"4,00",
+				"id":2
+			},
+			{
+				"text":["Spargelsuppe"],
+				"price":"",
+				"id":3
+			}
+		]
+	]
+}

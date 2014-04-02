@@ -1,0 +1,120 @@
+{
+	"meals": [
+		{ "text":"Menü 1", "id":0 },
+		{ "text":"Menü 2", "id":1 },
+		{ "text":"Menü 3", "id":2 },
+		{ "text":"Tagessuppe", "id":3 }
+	],
+	"week": [
+		[
+			{
+				"text":["Schinkennudeln", "Tomatensauce", "Parmesan", "Salat der Saison"],
+				"price":"3,00",
+				"id":0
+			},
+			{
+				"text":["Kartoffelauflauf","Schnittlauchsauce","Broccoli","Salat vom Buffet"],
+				"price":"3,20",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Gemüsesuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Gebratenes Seelachsfilet","Dillsauce","Blattspinat","Kartoffeln"],
+				"price":"3,40",
+				"id":0
+			},
+			{
+				"text":["Champignons in","Käsesahnesauce","Spaghetti","Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Kräutersuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Schweinebraten", "Thymiansauce", "Rotkohl", "Kartoffeln"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Blumenkohl-Käsebratling", "Kräutersauce", "Kartoffeln", "kleiner Blattsalat vom Buffet"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Broccolisuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Rindergeschnetzeltes mit", "Champignons", "Spätzle", "Salat der Saison"],
+				"price":"3,70",
+				"id":0
+			},
+			{
+				"text":["Fagottini Gorgonzola", "Gemüsestreifen", "Tomaten-Basilikumsauce", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Champignonsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Putenbraten", "Bratensauce", "Rustika-Gemüse", "Kartoffeln"],
+				"price":"3,60",
+				"id":0
+			},
+			{
+				"text":["Milchreis", "Kirschsauce"],
+				"price":"2,80",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Kartoffelsuppe"],
+				"price":"",
+				"id":3
+			}
+		]
+	]
+}

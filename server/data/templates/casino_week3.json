@@ -1,0 +1,120 @@
+{
+	"meals": [
+		{ "text":"Menü 1", "id":0 },
+		{ "text":"Menü 2", "id":1 },
+		{ "text":"Menü 3", "id":2 },
+		{ "text":"Tagessuppe", "id":3 }
+	],
+	"week": [
+		[
+			{
+				"text":["Hähnchenbrustfilet", "Sauce Hollondaise", "Romanagemüse", "Püree"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Kartoffeltaschen mit Frischkäse", "Frischkäsesauce", "Broccoli"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Gemüsesuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Königsberger Klopse", "Kapernsauce", "Petersilienkartoffeln", "Rote Beete"],
+				"price":"3,40",
+				"id":0
+			},
+			{
+				"text":["Vegetarisches Chili", "Baguette", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Kräutersuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Bolognese", "Gabelspaghetti", "Salat der Saison"],
+				"price":"3,40",
+				"id":0
+			},
+			{
+				"text":["Veg. Bratwurst", "Erbsen-Maisgemüse in Rahm", "Kartoffelpüree"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Broccolisuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Geflügelfrikadelle", "Kohlrabi in Rahm", "Petersilienkartoffeln"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Veg. Frühlingsrolle", "Asia-Gemüsesauce", "Reis"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Champignonsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Bratwurst", "Majoransauce", "Erbsen- Karottengemüse", "Püree"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Spätzle- Gemüsepfanne", "Käsesauce", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Kartoffelsuppe"],
+				"price":"",
+				"id":3
+			}
+		]
+	]
+}

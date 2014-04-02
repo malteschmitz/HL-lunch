@@ -1,0 +1,120 @@
+{
+	"meals": [
+		{ "text":"Menü 1", "id":0 },
+		{ "text":"Menü 2", "id":1 },
+		{ "text":"Menü 3", "id":2 },
+		{ "text":"Tagessuppe", "id":3 }
+	],
+	"week": [
+		[
+			{
+				"text":["Tortelloni mit Rindfleisch", "Tomaten-Paprikasauce", "Salat der Saison"],
+				"price":"3,30",
+				"id":0
+			},
+			{
+				"text":["Sellerie-Knusperschnitzel", "Kressesauce", "Reis", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Möhrensuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Hackbraten vom Rind", "Bratensauce", "Bohnen", "Püree"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Saccotini Rucola", "Blattspinat", "Käsesauce"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Blumenkohlsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Hähnchenbrustfiletspieß", "Champignonsauce", "Schonkostgemüse", "Reis"],
+				"price":"3,50",
+				"id":0
+			},
+			{
+				"text":["Grießbrei", "Fruchtsauce"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Gemüsesuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["Sauerbraten", "Rosinensauce", "Rotkohl", "Kartoffelklöße"],
+				"price":"3,70",
+				"id":0
+			},
+			{
+				"text":["Buonfatti Mediteran", "buntes Gemüse", "Tomaten- Oreganosauce", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Spinatsuppe"],
+				"price":"",
+				"id":3
+			}
+		],
+		[
+			{
+				"text":["ged. Fischfilet", "Senfsauce", "Petersilienkartoffeln", "Salat der Saison"],
+				"price":"3,40",
+				"id":0
+			},
+			{
+				"text":["Maultaschen mit Spinat", "im Gemüsesud", "Salat der Saison"],
+				"price":"3,00",
+				"id":1
+			},
+			{
+				"text":[],
+				"price":"",
+				"id":2
+			},
+			{
+				"text":["Spargelsuppe"],
+				"price":"",
+				"id":3
+			}
+		]
+	]
+}

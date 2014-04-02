@@ -38,20 +38,30 @@ lunchControllers.controller('DataCtrl', ['$rootScope', '$http', '$scope',
 			$rootScope.canteen = $scope.canteens[$index].toLowerCase();
 		};
 		
-		var today = new Date();
+		$rootScope.today = new Date();
+		
+		$rootScope.currentDay = -1;
+		
+		// ensure today is not a weekend
+		if($rootScope.today.getDay() == 0) {
+			$rootScope.today.setDate($rootScope.today.getDate() + 1);
+		} else if($rootScope.today.getDay() == 6) {
+			$rootScope.today.setDate($rootScope.today.getDate() + 2);
+		} else {
+			$rootScope.currentDay = $rootScope.today.getDay() - 1;
+		}
 		
 		// static values
 		$rootScope.weekdays = [
 			'Montag','Dienstag','Mittwoch','Donnerstag','Freitag'
 		];
 		
-		$rootScope.year = today.getFullYear();
-		$rootScope.kw = today.getWeek();
-		$rootScope.currentDay = today.getDay() - 1;
+		$rootScope.year = $rootScope.today.getFullYear();
+		$rootScope.kw = $rootScope.today.getWeek();
 		
 		// navigation variables
-		$rootScope.canteen = 'casino';				// navigates canteen
-		$rootScope.day = today.getDay() - 1; 		// navigates mobile view
+		$rootScope.canteen = 'casino';						// navigates canteen
+		$rootScope.day = $rootScope.today.getDay() - 1; 	// navigates mobile view
 		
 		// watch function
 		$rootScope.$watch('canteen', function() {
@@ -64,7 +74,7 @@ lunchControllers.controller('MobileViewCtrl', ['$rootScope',
 	function($rootScope) {
 		
 		$rootScope.showToday = function() {
-			$rootScope.day = $rootScope.currentDay;
+			$rootScope.day = $rootScope.today.getDay() - 1;
 		};
 		
 		$rootScope.nextDay = function() {

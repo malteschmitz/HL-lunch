@@ -2,37 +2,111 @@
 <html lang="de" ng-app="lunchApp">
 	<head>
 		<meta charset="utf-8">
+
+    <!-- disable Internet Explorer compatibility mode -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+    <!-- set viewport (for Google and Apple devices) -->
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon"
+          href="img/favicon.ico"
+          type="image/x-icon">
+
+    <!-- Google-specific tags -->
+    <!-- web application runs in full-screen mode: -->
+    <meta name="mobile-web-app-capable"
+          content="yes">
+    <!-- icon -->
+    <link rel="icon"
+          sizes="196x196"
+          href="icon-196x196.png">
 
     <!-- Apple-specific tags for Safari on iOS -->
     <!-- web application runs in full-screen mode: -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
     <!-- keep black status bar above the full-screen app -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!-- iPhone icon -->
-    <link href="img/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
-    <!-- iPad icon-->
-    <link href="img/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
-    <!-- iPhone (Retina) icon-->
-    <link href="img/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
-    <!-- iPad (Retina) icon-->
-    <link href="img/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
-    <!-- iPhone splash screen-->
-    <link href="img/apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
-    <!-- iPhone (Retina) splash screen-->
-    <link href="img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black">
+    <!-- set the title of the app used on the home screen -->
+    <meta name="apple-mobile-web-app-title"
+          content="HL-lunch">
+    <!-- disable phone number detection. -->
+    <meta name="format-detection"
+          content="telephone=no">
+
+    <!-- iOS 6 iPhone icon -->
+    <link href="img/apple-touch-icon-57x57.png"
+          sizes="57x57"
+          rel="apple-touch-icon">
+    <!-- iOS 6 iPhone (retina) icon-->
+    <link href="img/apple-touch-icon-114x114.png"
+          sizes="114x114"
+          rel="apple-touch-icon">
+    <!-- iOS 7 iPhone (retina) icon-->
+    <link href="img/apple-touch-icon-120x120.png"
+          sizes="120x120"
+          rel="apple-touch-icon">
+
+    <!-- iOS 6 iPad icon-->
+    <link href="img/apple-touch-icon-72x72.png"
+          sizes="72x72"
+          rel="apple-touch-icon">
+    <!-- iOS 6 iPad (retina) icon-->
+    <link href="img/apple-touch-icon-144x144.png"
+          sizes="144x144"
+          rel="apple-touch-icon">
+    <!-- iOS 7 iPad icon-->
+    <link href="img/apple-touch-icon-76x76.png"
+          sizes="76x76"
+          rel="apple-touch-icon">
+    <!-- iOS 7 iPad (retina) icon-->
+    <link href="img/apple-touch-icon-152x152.png"
+          sizes="152x152"
+          rel="apple-touch-icon">
+
+    <!-- iPhone 3.5" splash screen-->
+    <link href="img/apple-touch-startup-image-320x460.png"
+          media="(device-width: 320px) and
+                (-webkit-min-device-pixel-ratio: 1)"
+          rel="apple-touch-startup-image">
+    <!-- iPhone 3.5" (retina) splash screen-->
+    <link href="img/apple-touch-startup-image-640x920.png"
+          media="(device-width: 320px) and
+                 (device-height: 480px) and
+                 (-webkit-min-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+    <!-- iPhone 4" (retina) splash screen-->
+    <link href="img/apple-touch-startup-image-640x1096.png"
+          media="(device-width: 320px) and
+                 (device-height: 568px) and
+                 (-webkit-min-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
     <!-- iPad (portrait) splash screen-->
-    <link href="img/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <link href="img/apple-touch-startup-image-768x1004.png"
+          media="(device-width: 768px) and
+                 (orientation: portrait)"
+          rel="apple-touch-startup-image">
     <!-- iPad (landscape) splash screen-->
-    <link href="img/apple-touch-startup-image-1024x748.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
-    <!-- iPad (Retina, portrait) splash screen-->
-    <link href="img/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <!-- iPad (Retina, landscape) splash screen-->
-    <link href="img/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px)  and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="img/apple-touch-startup-image-1024x748.png"
+          media="(device-width: 768px) and
+                 (orientation: landscape)"
+          rel="apple-touch-startup-image">
+    <!-- iPad (retina, portrait) splash screen-->
+    <link href="img/apple-touch-startup-image-1536x2008.png"
+          media="(device-width: 768px) and
+                 (orientation: portrait) and
+                 (-webkit-min-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+    <!-- iPad (retina, landscape) splash screen-->
+    <link href="img/apple-touch-startup-image-2048x1496.png"
+          media="(device-width: 768px) and
+                 (orientation: landscape) and
+                 (-webkit-min-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
 
 		<title>HL-lunch</title>
 		
